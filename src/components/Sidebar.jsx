@@ -19,6 +19,7 @@ const styles = {
         padding: "10px",
         backgroundColor: "#f4f4f4",
         float: "right",
+        display: "flex",
     },
 };
 

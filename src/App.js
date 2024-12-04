@@ -12,7 +12,16 @@ function App() {
             <Navbar />
             <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <MainContent />
+                <MainContent />
+                <MainContent />
+                <MainContent />
                 <Sidebar />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <MainContent />
+                <MainContent />
+                <MainContent />
+                <MainContent />
             </div>
             <Footer />
         </div>
