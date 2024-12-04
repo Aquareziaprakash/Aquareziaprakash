@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
+import React from "react";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 function App() {
-    const name1 = "Prakash";
-    const name2 = "Ramesh";
-    const Numbers = [1, 2, 3, 4, 5, 6, 7,];
-
     return (
-        <>
-            <div className="App">
-                <h1>This is an output.</h1>
-                <h2>Hello, {name1}! Your name is {name2}.</h2>
-                <Header />
-                <h3 style={{ color: "red" }}> the numbers are {Numbers}</h3>
-                {Numbers.map((number) => (
-                    <h1 style={{ color: "red" }}> {number}</h1>
-                ))}
+        <div>
+            <Header />
+            <Navbar />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <MainContent />
+                <Sidebar />
             </div>
-        </>
-
+            <Footer />
+        </div>
     );
 }
 
