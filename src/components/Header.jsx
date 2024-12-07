@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header({ name, email }) {
+function Header({ name, email, children }) {
     console.log(name);
     console.log(name.firstName + " " + name.lastName);
     console.log(email);
@@ -8,6 +8,7 @@ function Header({ name, email }) {
     return (
         <header style={styles.header}>
             <h1>My React Website {name.firstName + " " + name.lastName}</h1>
+            {children}
             <p>{email}</p>
         </header>
     );

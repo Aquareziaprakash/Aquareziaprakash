@@ -46,3 +46,59 @@
   height: 100vh;
   background-color: burlywood;
 }
+
+/* General Styles */
+.container-fluid {
+  padding: 20px;
+  /* Add padding to the container */
+  background-color: #f9f9f9;
+  /* Light background color */
+}
+
+/* Row Styling */
+.row {
+  margin-bottom: 20px;
+  /* Space between rows */
+}
+
+/* Column Styling */
+.col {
+  padding: 15px;
+  /* Add padding inside columns */
+  background-color: #ffffff;
+  /* White background for columns */
+  border: 1px solid #ddd;
+  /* Light gray border */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+/* Column Headings */
+.col h2 {
+  font-size: 1.5rem;
+  /* Adjust font size for headings */
+  color: #333;
+  /* Dark gray for headings */
+  margin-bottom: 10px;
+  /* Space below heading */
+}
+
+/* Column Content */
+.col p {
+  font-size: 1rem;
+  /* Standard font size */
+  color: #555;
+  /* Medium gray for content text */
+  line-height: 1.6;
+  /* Improve readability */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .col {
+    margin-bottom: 20px;
+    /* Add spacing between columns on smaller screens */
+  }
+}

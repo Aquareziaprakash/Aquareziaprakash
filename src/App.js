@@ -4,21 +4,30 @@ import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import { Container } from "react-bootstrap";
-import { Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Container, Row, Col } from "react-bootstrap";
+import { Card, CardContent, CardActions, Typography, Button } from "@mui/material";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import { blog } from "./Data/blog";
 
 function App() {
-    let name = {
+    const name = {
         firstName: "Prakash",
         lastName: "Koirala",
-        age: 30
+        age: 30,
     };
+
     return (
         <div>
-            <Header name={name} email="aquareziaprakash@gmail.com" />
+            {/* Header Section */}
+            <Header name={name} email="aquareziaprakash@gmail.com">
+                <p>Welcome to my website!</p>
+            </Header>
+
+            {/* Navigation Bar */}
             <Navbar />
+
+            {/* Main Content Section */}
             <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <MainContent />
                 <MainContent />
@@ -26,13 +35,6 @@ function App() {
                 <MainContent />
                 <Sidebar />
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <MainContent />
-                <MainContent />
-                <MainContent />
-                <MainContent />
-            </div>
-            <Footer />
             <Container fluid>
                 <Row>
                     <Col>
@@ -44,28 +46,42 @@ function App() {
                         <p>Some content...</p>
                     </Col>
                 </Row>
+            </Container>
+
+            {/* Product Items Section */}
+            <Container>
                 <Row>
-                    <Col>
-                        <h2>Column 3</h2>
-                        <p>Some content...</p>
-                    </Col>
-                    <Col>
-                        <h2>Column 4</h2>
-                        <p>Some content...</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h2>Column 5</h2>
-                        <p>Some content...</p>
-                    </Col>
-                    <Col>
-                        <h2>Column 6</h2>
-                        <p>Some content...</p>
-                    </Col>
+                    {blog.map((item, index) => (
+                        <ProductItem key={index} title={item.title} description={item.description} />
+                    ))}
                 </Row>
             </Container>
+
+            {/* Footer Section */}
+            <Footer />
         </div>
+    );
+}
+
+function ProductItem({ title, description }) {
+    return (
+        <Col lg="3" md="6">
+            <Card>
+                <CardContent>
+                    <Typography variant="h6" component="div">
+                        {title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {description}
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button variant="contained" color="primary">
+                        Go Somewhere
+                    </Button>
+                </CardActions>
+            </Card>
+        </Col>
     );
 }
 
