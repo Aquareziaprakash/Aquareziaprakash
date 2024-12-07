@@ -1,13 +1,14 @@
 import React from "react";
 
-function Header(props) {
-    let { name } = props;
+function Header({ name, email }) {
     console.log(name);
     console.log(name.firstName + " " + name.lastName);
-    return (
+    console.log(email);
 
+    return (
         <header style={styles.header}>
-            <h1>My React Website {name.firstName + " " + name.lastName} </h1>
+            <h1>My React Website {name.firstName + " " + name.lastName}</h1>
+            <p>{email}</p>
         </header>
     );
 }
@@ -15,7 +16,7 @@ function Header(props) {
 const styles = {
     header: {
         backgroundColor: "#Ac8968",
-        color: "3362E",
+        color: "#3362E1", // Corrected the color value
         padding: "10px",
         textAlign: "center",
     },

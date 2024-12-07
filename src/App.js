@@ -11,13 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     let name = {
-        firstName: "John",
-        lastName: "Doe",
+        firstName: "Prakash",
+        lastName: "Koirala",
         age: 30
     };
     return (
         <div>
-            <Header name={name} />
+            <Header name={name} email="aquareziaprakash@gmail.com" />
             <Navbar />
             <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <MainContent />
