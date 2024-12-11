@@ -9,6 +9,8 @@ import { Card, CardContent, CardActions, Typography, Button } from "@mui/materia
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { blog } from "./Data/blog";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
     const name = {
@@ -21,7 +23,7 @@ function App() {
         <div>
             {/* Header Section */}
             <Header name={name} email="aquareziaprakash@gmail.com">
-                <p>Welcome to my website!</p>
+                <p>Welcome to my website!  <FontAwesomeIcon icon={faWhatsapp} className="text-success" /></p>
             </Header>
 
             {/* Navigation Bar */}

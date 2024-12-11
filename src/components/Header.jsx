@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../images/image.png";
 
 function Header({ name, email, children }) {
     console.log(name);
@@ -7,9 +8,10 @@ function Header({ name, email, children }) {
 
     return (
         <header style={styles.header}>
-            <h1>My React Website {name.firstName + " " + name.lastName}</h1>
+            <h1> <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />My React Website {name.firstName + " " + name.lastName}</h1>
             {children}
             <p>{email}</p>
+            <img src={image} alt="" srcset="" />
         </header>
     );
 }
@@ -21,6 +23,13 @@ const styles = {
         padding: "10px",
         textAlign: "center",
     },
+
+    img: {
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        marginLeft: "10px"
+    }
 };
 
 export default Header;
