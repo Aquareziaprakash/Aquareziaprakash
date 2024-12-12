@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import MainContent from "./components/MainContent";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -11,6 +13,7 @@ import "./index.css";
 import { blog } from "./Data/blog";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 
 function App() {
     const name = {
@@ -28,6 +31,11 @@ function App() {
 
             {/* Navigation Bar */}
             <Navbar />
+            <Routes>
+                <Route path="/" element={<MainContent />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+            </Routes>
 
             {/* Main Content Section */}
             <div style={{ display: "flex", justifyContent: "space-between" }}>
