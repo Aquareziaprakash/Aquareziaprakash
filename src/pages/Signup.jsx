@@ -1,57 +1,57 @@
 import React from 'react';
 
 const Signup = () => {
-    return (
-        <div className="signup-container">
-            <div className="signup-card">
-                <h1 className="signup-title">Create an Account</h1>
-                <form className="signup-form">
-                    <div className="form-group">
-                        <label htmlFor="name">Full Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            className="form-input"
-                            placeholder="Enter your full name"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            className="form-input"
-                            placeholder="Enter your email"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            id="password"
-                            className="form-input"
-                            placeholder="Create a password"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="confirm-password">Confirm Password</label>
-                        <input
-                            type="password"
-                            id="confirm-password"
-                            className="form-input"
-                            placeholder="Confirm your password"
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="signup-button">Sign Up</button>
-                </form>
-                <p className="login-link">Already have an account? <a href="#">Login</a></p>
-            </div>
-        </div>
-    );
+  return (
+    <div className="signup-container">
+      <div className="signup-card">
+        <h1 className="signup-title">Create an Account</h1>
+        <form className="signup-form">
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              className="form-input"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              className="form-input"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              className="form-input"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          <button type="submit" className="signup-button">Sign Up</button>
+        </form>
+        <p className="login-link">Already have an account? <a href="./Login">Login</a></p>
+      </div>
+    </div>
+  );
 };
 
 export default Signup;
@@ -145,9 +145,9 @@ const styles = `
 `;
 
 export const addStyles = () => {
-    const style = document.createElement('style');
-    style.innerHTML = styles;
-    document.head.appendChild(style);
+  const style = document.createElement('style');
+  style.innerHTML = styles;
+  document.head.appendChild(style);
 };
 
 addStyles();

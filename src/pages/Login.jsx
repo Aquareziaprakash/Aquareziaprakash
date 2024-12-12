@@ -1,40 +1,51 @@
 import React from 'react';
+import Signup from "./Signup";
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
+
 
 const Login = () => {
-    return (
-        <div className="login-container">
-            <div className="login-card">
-                <h1 className="login-title">Welcome Back!</h1>
-                <form className="login-form">
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            className="form-input"
-                            placeholder="Enter your email"
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            id="password"
-                            className="form-input"
-                            placeholder="Enter your password"
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="login-button">Login</button>
-                </form>
-                <p className="signup-link">Don't have an account? <a href="#">Sign up</a></p>
-            </div>
-        </div>
-    );
+  <Routes>
+    <Route path="/signup" element={<Signup />} />
+  </Routes>
+  return (
+    <div className="login-container">
+      <div className="login-card">
+        <h1 className="login-title">Welcome Back!</h1>
+        <form className="login-form">
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              className="form-input"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" onSubmit={ThankYou} className="login-button">Login</button>
+        </form>
+
+        <p className="signup-link">Don't have an account? <a href="./Signup">Sign up</a></p>
+      </div>
+    </div>
+  );
 };
 
 export default Login;
+
+function ThankYou() {
+  alert('Thank you for registering')
+}
 
 /* CSS in the same file */
 const styles = `
@@ -125,9 +136,9 @@ const styles = `
 `;
 
 export const addStyles = () => {
-    const style = document.createElement('style');
-    style.innerHTML = styles;
-    document.head.appendChild(style);
+  const style = document.createElement('style');
+  style.innerHTML = styles;
+  document.head.appendChild(style);
 };
 
 addStyles();
